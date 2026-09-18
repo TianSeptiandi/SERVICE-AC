@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
     <!-- =========================================================
@@ -24,7 +25,7 @@
           content="servis AC, service AC, servis AC terdekat, cuci AC, cuci AC terdekat, isi freon AC, perbaikan AC, AC tidak dingin, teknisi AC, bongkar pasang AC, instalasi AC">
 
     <meta name="author"
-          content="NAMA USAHA SERVIS AC">
+          content="AC PRO Service">
 
     <meta name="theme-color"
           content="#087ea4">
@@ -41,7 +42,6 @@
 
     <!-- =========================================================
          CANONICAL
-         GANTI DOMAIN DI BAWAH DENGAN DOMAIN ASLI
     ========================================================== -->
 
     <link rel="canonical"
@@ -50,7 +50,6 @@
 
     <!-- =========================================================
          FAVICON
-         NANTI BISA DIGANTI DENGAN LOGO SENDIRI
     ========================================================== -->
 
     <link rel="icon"
@@ -60,7 +59,6 @@
 
     <!-- =========================================================
          OPEN GRAPH
-         UNTUK SHARE KE WHATSAPP / FACEBOOK / DLL
     ========================================================== -->
 
     <meta property="og:type"
@@ -86,7 +84,7 @@
 
 
     <!-- =========================================================
-         TWITTER CARD
+         TWITTER
     ========================================================== -->
 
     <meta name="twitter:card"
@@ -104,7 +102,6 @@
 
     <!-- =========================================================
          PRECONNECT
-         MEMBANTU KONEKSI KE SUMBER EKSTERNAL
     ========================================================== -->
 
     <link rel="preconnect"
@@ -115,10 +112,7 @@
 
 
     <!-- =========================================================
-         STRUCTURED DATA - LOCAL BUSINESS
-         
-         PENTING:
-         GANTI SEMUA DATA CONTOH DENGAN DATA USAHA ASLI.
+         LOCAL BUSINESS SEO
     ========================================================== -->
 
     <script type="application/ld+json">
@@ -177,6 +171,7 @@
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
+
                 "dayOfWeek": [
                     "Monday",
                     "Tuesday",
@@ -186,6 +181,7 @@
                     "Saturday",
                     "Sunday"
                 ],
+
                 "opens": "08:00",
                 "closes": "21:00"
             }
@@ -200,7 +196,7 @@
 
 
     <!-- =========================================================
-         STRUCTURED DATA - WEBSITE
+         WEBSITE SEO
     ========================================================== -->
 
     <script type="application/ld+json">
@@ -216,7 +212,7 @@
 
 
     <!-- =========================================================
-         STRUCTURED DATA - BREADCRUMB
+         BREADCRUMB SEO
     ========================================================== -->
 
     <script type="application/ld+json">
@@ -242,52 +238,95 @@
 
     <style>
 
+        /* =====================================================
+           RESET
+        ====================================================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         body {
+            margin: 0;
+            padding: 0;
+
             background: #f7fbff;
             color: #1f2937;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.6;
+
+            overflow-x: hidden;
         }
 
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
 
-        /* ================= HEADER ================= */
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
 
         header {
             position: fixed;
+
             top: 0;
+            left: 0;
+
             width: 100%;
+
             z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+
+            background:
+                rgba(255,255,255,0.97);
+
+            box-shadow:
+                0 2px 15px rgba(0,0,0,0.08);
         }
 
         .navbar {
+            width: 100%;
             max-width: 1150px;
+
             margin: auto;
-            padding: 15px 20px;
+
+            padding:
+                15px 20px;
+
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
         }
 
         .logo {
             font-size: 22px;
+
             font-weight: bold;
+
             color: #087ea4;
+
+            white-space: nowrap;
         }
 
         .logo span {
@@ -296,13 +335,19 @@
 
         nav {
             display: flex;
+
+            align-items: center;
+
             gap: 25px;
         }
 
         nav a {
             text-decoration: none;
+
             color: #333;
+
             font-weight: 600;
+
             transition: 0.3s;
         }
 
@@ -312,17 +357,31 @@
 
         .menu-btn {
             display: none;
-            font-size: 27px;
+
+            border: none;
+
+            background: transparent;
+
+            font-size: 28px;
+
+            color: #087ea4;
+
             cursor: pointer;
+
+            line-height: 1;
         }
 
 
-        /* ================= HERO ================= */
+        /* =====================================================
+           HERO
+        ====================================================== */
 
         .hero {
             min-height: 100vh;
 
-            padding: 150px 20px 80px;
+            padding:
+                150px 20px
+                80px;
 
             background:
                 linear-gradient(
@@ -331,20 +390,26 @@
                 ),
 
                 url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
+                center / cover no-repeat;
 
             color: white;
+
+            display: flex;
+
+            align-items: center;
         }
 
         .hero-container {
+            width: 100%;
             max-width: 1150px;
+
             margin: auto;
 
             display: grid;
 
             grid-template-columns:
-                1.2fr
-                0.8fr;
+                minmax(0, 1.2fr)
+                minmax(280px, 0.8fr);
 
             align-items: center;
 
@@ -353,99 +418,152 @@
 
         .hero h1 {
             font-size: 48px;
+
             line-height: 1.2;
+
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 19px;
+
             margin-bottom: 30px;
+
             max-width: 650px;
         }
 
         .buttons {
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 24px;
+
+            padding:
+                14px 24px;
+
             border-radius: 8px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: 0.3s;
+
+            text-align: center;
         }
 
         .btn-wa {
             background: #25d366;
+
             color: white;
         }
 
         .btn-wa:hover {
             background: #1ebc59;
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
         }
 
         .btn-outline {
-            border: 2px solid white;
+            border:
+                2px solid white;
+
             color: white;
         }
 
         .btn-outline:hover {
             background: white;
+
             color: #087ea4;
         }
 
         .hero-card {
+            width: 100%;
+
             background: white;
+
             color: #222;
+
             padding: 30px;
+
             border-radius: 18px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.2);
         }
 
         .hero-card h2 {
             color: #087ea4;
+
             font-size: 22px;
+
             margin-bottom: 15px;
         }
 
         .hero-card div {
-            padding: 9px 0;
-            border-bottom: 1px solid #eee;
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid #eee;
+        }
+
+        .hero-card div:last-child {
+            border-bottom: none;
         }
 
 
-        /* ================= GENERAL ================= */
+        /* =====================================================
+           GENERAL
+        ====================================================== */
 
         section {
-            padding: 80px 20px;
+            padding:
+                80px 20px;
         }
 
         .container {
+            width: 100%;
+
             max-width: 1150px;
+
             margin: auto;
         }
 
         .section-title {
             text-align: center;
+
             margin-bottom: 45px;
         }
 
         .section-title h2 {
             font-size: 34px;
+
             color: #087ea4;
+
             margin-bottom: 10px;
         }
 
         .section-title p {
             color: #666;
+
+            max-width: 700px;
+
+            margin:
+                0 auto;
         }
 
 
-        /* ================= SERVICES ================= */
+        /* =====================================================
+           SERVICES
+        ====================================================== */
 
         .services {
             background: white;
@@ -453,31 +571,47 @@
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
             gap: 22px;
         }
 
         .service-card {
             background: #f7fbff;
-            padding: 30px 25px;
+
+            padding:
+                30px 25px;
+
             border-radius: 14px;
+
             text-align: center;
-            border: 1px solid #e3f2f8;
+
+            border:
+                1px solid #e3f2f8;
+
             transition: 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.08);
         }
 
         .service-icon {
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .service-card h3 {
             margin-bottom: 10px;
+
             color: #087ea4;
         }
 
@@ -486,7 +620,9 @@
         }
 
 
-        /* ================= ABOUT ================= */
+        /* =====================================================
+           ABOUT
+        ====================================================== */
 
         .about {
             background: #eef9fd;
@@ -494,30 +630,43 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(0,1fr);
+
             gap: 50px;
+
             align-items: center;
         }
 
         .about-image img {
             width: 100%;
+
             border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.12);
         }
 
         .about-content h2 {
             color: #087ea4;
+
             font-size: 34px;
+
             margin-bottom: 20px;
         }
 
         .about-content p {
             margin-bottom: 15px;
+
             color: #555;
         }
 
         .check-list {
             list-style: none;
+
             margin-top: 20px;
         }
 
@@ -526,74 +675,102 @@
         }
 
 
-        /* ================= PRICE ================= */
+        /* =====================================================
+           PRICE
+        ====================================================== */
+
+        .price {
+            background: white;
+        }
 
         .price-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
             gap: 22px;
         }
 
         .price-card {
-            background: white;
+            background: #f7fbff;
+
+            padding:
+                28px 24px;
+
             border-radius: 15px;
-            padding: 30px;
+
+            border:
+                1px solid #e3f2f8;
+
             text-align: center;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .price-card h3 {
             color: #087ea4;
-            margin-bottom: 10px;
+
+            margin-bottom: 12px;
         }
 
-        .price {
-            font-size: 27px;
+        .price-number {
+            font-size: 26px;
+
             font-weight: bold;
-            margin: 15px 0;
-            color: #222;
+
+            color: #16a6d9;
+
+            margin-bottom: 10px;
         }
 
         .price-card p {
             color: #666;
+
+            font-size: 14px;
         }
 
 
-        /* ================= AREA ================= */
+        /* =====================================================
+           AREA
+        ====================================================== */
 
         .area {
-            background: #087ea4;
-            color: white;
-            text-align: center;
-        }
-
-        .area h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
-
-        .area p {
-            max-width: 750px;
-            margin: auto;
+            background: #eef9fd;
         }
 
         .area-list {
-            margin-top: 25px;
             display: flex;
+
             justify-content: center;
-            gap: 12px;
+
             flex-wrap: wrap;
+
+            gap: 12px;
         }
 
-        .area-list span {
-            background: rgba(255,255,255,0.15);
-            padding: 9px 17px;
+        .area-item {
+            background: white;
+
+            padding:
+                12px 20px;
+
             border-radius: 30px;
+
+            color: #087ea4;
+
+            font-weight: 600;
+
+            border:
+                1px solid #dceff6;
+
+            box-shadow:
+                0 4px 12px
+                rgba(0,0,0,0.05);
         }
 
 
-        /* ================= CONTACT ================= */
+        /* =====================================================
+           CONTACT
+        ====================================================== */
 
         .contact {
             background: white;
@@ -601,19 +778,29 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(0,1fr);
+
+            gap: 30px;
         }
 
-        .contact-box {
+        .contact-card {
             background: #f7fbff;
+
             padding: 30px;
+
             border-radius: 15px;
+
+            border:
+                1px solid #e3f2f8;
         }
 
-        .contact-box h3 {
+        .contact-card h3 {
             color: #087ea4;
-            margin-bottom: 15px;
+
+            margin-bottom: 20px;
         }
 
         .contact-item {
@@ -622,142 +809,515 @@
 
         .contact-item strong {
             display: block;
+
+            margin-bottom: 3px;
+        }
+
+        .contact-item a {
+            color: #087ea4;
+
+            text-decoration: none;
+
+            font-weight: 600;
         }
 
         .map {
             width: 100%;
-            height: 300px;
+
+            height: 350px;
+
             border: 0;
+
             border-radius: 15px;
+
+            display: block;
         }
 
 
-        /* ================= CTA ================= */
+        /* =====================================================
+           CTA
+        ====================================================== */
 
         .cta {
             background:
                 linear-gradient(
                     135deg,
                     #087ea4,
-                    #12a5d4
+                    #16a6d9
                 );
 
             color: white;
+
             text-align: center;
         }
 
         .cta h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
+            font-size: 34px;
+
+            margin-bottom: 12px;
         }
 
         .cta p {
             margin-bottom: 25px;
         }
 
+        .cta .btn-wa {
+            background: white;
 
-        /* ================= FOOTER ================= */
+            color: #087ea4;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
 
         footer {
-            background: #073b4c;
+            background: #063f52;
+
             color: white;
+
             text-align: center;
-            padding: 25px 20px;
+
+            padding:
+                30px 20px;
         }
 
-        footer a {
-            color: white;
-            text-decoration: none;
+        footer p {
+            font-size: 14px;
         }
 
 
-        /* ================= FLOATING WHATSAPP ================= */
+        /* =====================================================
+           FLOATING WHATSAPP
+        ====================================================== */
 
         .floating-wa {
             position: fixed;
+
             right: 20px;
+
             bottom: 20px;
 
             width: 58px;
+
             height: 58px;
 
             background: #25d366;
+
             color: white;
 
             border-radius: 50%;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            font-size: 28px;
             text-decoration: none;
 
+            font-size: 27px;
+
             box-shadow:
-                0 5px 20px rgba(0,0,0,0.25);
+                0 5px 20px
+                rgba(0,0,0,0.2);
 
             z-index: 999;
         }
 
 
-        /* ================= MOBILE ================= */
+        /* =====================================================
+           TABLET
+        ====================================================== */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
-            nav {
-                display: none;
+            .hero {
+                min-height: auto;
 
-                position: absolute;
+                padding-top: 130px;
 
-                top: 70px;
-                left: 0;
-
-                width: 100%;
-
-                background: white;
-
-                flex-direction: column;
-
-                padding: 20px;
-
-                gap: 15px;
-
-                box-shadow:
-                    0 5px 15px rgba(0,0,0,0.1);
+                padding-bottom: 60px;
             }
 
-            nav.active {
-                display: flex;
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .hero-card {
+                max-width: 600px;
+
+                margin: auto;
+            }
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+            }
+
+            .price-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .about-image {
+                max-width: 700px;
+
+                margin: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 600px) {
+
+            /* HEADER */
+
+            .navbar {
+                padding:
+                    12px 16px;
+            }
+
+            .logo {
+                font-size: 19px;
             }
 
             .menu-btn {
                 display: block;
             }
 
-            .hero-container,
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
+            nav {
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                display: none;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                box-shadow:
+                    0 8px 20px
+                    rgba(0,0,0,0.08);
             }
 
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+
+                padding:
+                    14px 20px;
+
+                border-bottom:
+                    1px solid #eee;
+
+                font-size: 15px;
+            }
+
+
+            /* HERO */
+
             .hero {
-                padding-top: 120px;
+                min-height: auto;
+
+                padding:
+                    105px 16px
+                    45px;
+            }
+
+            .hero-container {
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 31px;
+
+                line-height: 1.25;
+
+                margin-bottom: 15px;
             }
 
-            .service-grid,
+            .hero p {
+                font-size: 16px;
+
+                line-height: 1.6;
+
+                margin-bottom: 22px;
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                width: 100%;
+
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+
+                padding:
+                    13px 18px;
+            }
+
+            .hero-card {
+                padding: 21px;
+
+                border-radius: 14px;
+            }
+
+            .hero-card h2 {
+                font-size: 19px;
+            }
+
+            .hero-card div {
+                font-size: 14px;
+            }
+
+
+            /* GENERAL */
+
+            section {
+                padding:
+                    55px 16px;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+
+                line-height: 1.3;
+            }
+
+            .section-title p {
+                font-size: 14px;
+            }
+
+
+            /* SERVICES */
+
+            .service-grid {
+                grid-template-columns: 1fr;
+
+                gap: 14px;
+            }
+
+            .service-card {
+                padding:
+                    23px 18px;
+            }
+
+            .service-icon {
+                font-size: 38px;
+
+                margin-bottom: 10px;
+            }
+
+            .service-card h3 {
+                font-size: 18px;
+            }
+
+            .service-card p {
+                font-size: 14px;
+            }
+
+
+            /* ABOUT */
+
+            .about-grid {
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .about-content h2 {
+                font-size: 27px;
+
+                line-height: 1.3;
+            }
+
+            .about-content p {
+                font-size: 14px;
+            }
+
+            .check-list li {
+                font-size: 14px;
+            }
+
+
+            /* PRICE */
+
             .price-grid {
                 grid-template-columns: 1fr;
+
+                gap: 14px;
             }
 
-            .section-title h2,
-            .about-content h2,
-            .area h2,
+            .price-card {
+                padding:
+                    23px 18px;
+            }
+
+            .price-number {
+                font-size: 24px;
+            }
+
+
+            /* AREA */
+
+            .area-list {
+                justify-content: center;
+
+                gap: 8px;
+            }
+
+            .area-item {
+                padding:
+                    9px 14px;
+
+                font-size: 13px;
+            }
+
+
+            /* CONTACT */
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .contact-card {
+                padding:
+                    22px 18px;
+            }
+
+            .contact-card h3 {
+                font-size: 20px;
+            }
+
+            .contact-item {
+                font-size: 14px;
+            }
+
+            .map {
+                height: 280px;
+
+                border-radius: 12px;
+            }
+
+
+            /* CTA */
+
             .cta h2 {
+                font-size: 27px;
+
+                line-height: 1.3;
+            }
+
+            .cta p {
+                font-size: 14px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+                padding:
+                    25px 16px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+
+
+            /* WHATSAPP */
+
+            .floating-wa {
+                width: 52px;
+
+                height: 52px;
+
+                right: 15px;
+
+                bottom: 15px;
+
+                font-size: 24px;
+            }
+        }
+
+
+        /* =====================================================
+           HP SANGAT KECIL
+        ====================================================== */
+
+        @media (max-width: 380px) {
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .hero {
+                padding:
+                    100px 14px
+                    40px;
+            }
+
+            .hero h1 {
                 font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            section {
+                padding:
+                    45px 14px;
+            }
+
+            .section-title h2 {
+                font-size: 24px;
+            }
+
+            .hero-card {
+                padding: 18px;
             }
 
         }
@@ -770,773 +1330,717 @@
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================== -->
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-<header>
+    <header>
 
-    <div class="navbar">
+        <div class="navbar">
 
-        <div class="logo"
-             aria-label="AC PRO Service">
+            <div class="logo">
+                AC <span>PRO</span>
+            </div>
 
-            ❄️ AC<span>PRO</span>
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Buka menu"
+                type="button">
 
-        </div>
+                ☰
 
+            </button>
 
-        <button
-            class="menu-btn"
-            onclick="toggleMenu()"
-            aria-label="Buka menu navigasi"
-            aria-expanded="false"
-            aria-controls="navMenu">
+            <nav id="navMenu">
 
-            ☰
-
-        </button>
-
-
-        <nav id="navMenu"
-             aria-label="Navigasi utama">
-
-            <a href="#home">Beranda</a>
-
-            <a href="#layanan">Layanan</a>
-
-            <a href="#tentang">Tentang</a>
-
-            <a href="#harga">Harga</a>
-
-            <a href="#kontak">Kontak</a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =========================================================
-     HERO
-========================================================== -->
-
-<main>
-
-<section
-    class="hero"
-    id="home"
-    aria-labelledby="hero-title">
-
-    <div class="hero-container">
-
-
-        <div>
-
-            <h1 id="hero-title">
-                Jasa Servis AC Profesional & Terpercaya
-            </h1>
-
-
-            <p>
-                Melayani servis AC, cuci AC, perbaikan AC tidak dingin,
-                isi freon, bongkar pasang, dan instalasi AC.
-                Teknisi berpengalaman dan siap datang ke lokasi Anda.
-            </p>
-
-
-            <div class="buttons">
-
-                <!--
-                    GANTI NOMOR 6281234567890
-                    DENGAN NOMOR WHATSAPP ASLI
-                -->
-
-                <a
-                    href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20memesan%20jasa%20servis%20AC."
-                    class="btn btn-wa"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    📱 Pesan via WhatsApp
-
+                <a href="#home">
+                    Beranda
                 </a>
 
-
-                <a
-                    href="#layanan"
-                    class="btn btn-outline">
-
-                    Lihat Layanan
-
+                <a href="#layanan">
+                    Layanan
                 </a>
 
-            </div>
+                <a href="#tentang">
+                    Tentang
+                </a>
+
+                <a href="#harga">
+                    Harga
+                </a>
+
+                <a href="#area">
+                    Area
+                </a>
+
+                <a href="#kontak">
+                    Kontak
+                </a>
+
+            </nav>
 
         </div>
 
+    </header>
 
 
-        <div class="hero-card">
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
 
-            <h2>
-                Kenapa Memilih Kami?
-            </h2>
+    <section
+        class="hero"
+        id="home">
 
-            <div>✅ Teknisi Berpengalaman</div>
+        <div class="hero-container">
 
-            <div>✅ Respon Cepat</div>
+            <div>
 
-            <div>✅ Harga Transparan</div>
-
-            <div>✅ Melayani Panggilan</div>
-
-            <div>✅ Garansi Pengerjaan</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SERVICES
-========================================================== -->
-
-<section
-    class="services"
-    id="layanan"
-    aria-labelledby="layanan-title">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2 id="layanan-title">
-                Layanan Servis AC
-            </h2>
-
-            <p>
-                Berbagai kebutuhan servis dan perawatan AC
-            </p>
-
-        </div>
-
-
-
-        <div class="service-grid">
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    ❄️
-
-                </div>
-
-                <h3>
-                    Cuci AC
-                </h3>
+                <h1>
+                    Jasa Servis AC
+                    Profesional & Terpercaya
+                </h1>
 
                 <p>
-                    Membersihkan unit indoor dan outdoor AC
-                    agar tetap bersih dan bekerja optimal.
+                    Melayani servis AC, cuci AC,
+                    isi freon, perbaikan AC tidak dingin,
+                    bongkar pasang dan instalasi AC.
+                    Teknisi siap datang ke lokasi Anda.
                 </p>
 
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    🔧
-
-                </div>
-
-                <h3>
-                    Servis AC
-                </h3>
-
-                <p>
-                    Pemeriksaan dan perbaikan AC yang mengalami
-                    gangguan atau kerusakan.
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    💨
-
-                </div>
-
-                <h3>
-                    Isi Freon AC
-                </h3>
-
-                <p>
-                    Pengisian atau penambahan refrigerant
-                    sesuai kebutuhan dan kondisi AC.
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    🛠️
-
-                </div>
-
-                <h3>
-                    AC Tidak Dingin
-                </h3>
-
-                <p>
-                    Pemeriksaan penyebab AC kurang dingin
-                    dan penanganan sesuai kondisi unit.
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    🔌
-
-                </div>
-
-                <h3>
-                    Bongkar Pasang AC
-                </h3>
-
-                <p>
-                    Jasa bongkar dan pemasangan kembali
-                    unit AC dengan pengerjaan yang rapi.
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div
-                    class="service-icon"
-                    aria-hidden="true">
-
-                    🏠
-
-                </div>
-
-                <h3>
-                    Instalasi AC
-                </h3>
-
-                <p>
-                    Melayani pemasangan AC baru untuk rumah,
-                    kantor, toko dan tempat usaha.
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     ABOUT
-========================================================== -->
-
-<section
-    class="about"
-    id="tentang"
-    aria-labelledby="tentang-title">
-
-    <div class="container">
-
-
-        <div class="about-grid">
-
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80"
-                    alt="Teknisi sedang melakukan servis AC"
-                    width="900"
-                    height="600"
-                    loading="lazy">
-
-            </div>
-
-
-
-            <div class="about-content">
-
-                <h2 id="tentang-title">
-                    Tentang Kami
-                </h2>
-
-
-                <p>
-                    Kami menyediakan jasa servis dan perawatan AC
-                    untuk kebutuhan rumah, kantor, toko, maupun
-                    tempat usaha.
-                </p>
-
-
-                <p>
-                    Dengan teknisi yang berpengalaman, kami berusaha
-                    memberikan pelayanan yang cepat, rapi, dan transparan.
-                </p>
-
-
-                <ul class="check-list">
-
-                    <li>
-                        ✔ Melayani panggilan ke lokasi
-                    </li>
-
-                    <li>
-                        ✔ Konsultasi masalah AC
-                    </li>
-
-                    <li>
-                        ✔ Harga diinformasikan sebelum pengerjaan
-                    </li>
-
-                    <li>
-                        ✔ Pengerjaan rapi
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PRICE
-========================================================== -->
-
-<section
-    id="harga"
-    aria-labelledby="harga-title">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2 id="harga-title">
-                Layanan & Estimasi Harga
-            </h2>
-
-            <p>
-                Harga dapat menyesuaikan kondisi dan tingkat kerusakan
-            </p>
-
-        </div>
-
-
-
-        <div class="price-grid">
-
-
-            <article class="price-card">
-
-                <h3>
-                    Cuci AC
-                </h3>
-
-                <div class="price">
-                    Mulai Rp75.000
-                </div>
-
-                <p>
-                    Pembersihan unit indoor dan outdoor.
-                </p>
-
-            </article>
-
-
-
-            <article class="price-card">
-
-                <h3>
-                    Servis AC
-                </h3>
-
-                <div class="price">
-                    Mulai Rp100.000
-                </div>
-
-                <p>
-                    Pemeriksaan dan penanganan gangguan AC.
-                </p>
-
-            </article>
-
-
-
-            <article class="price-card">
-
-                <h3>
-                    Isi Freon
-                </h3>
-
-                <div class="price">
-                    Hubungi Kami
-                </div>
-
-                <p>
-                    Harga menyesuaikan jenis freon
-                    dan kondisi AC.
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     AREA LAYANAN
-========================================================== -->
-
-<section
-    class="area"
-    id="area"
-    aria-labelledby="area-title">
-
-    <div class="container">
-
-        <h2 id="area-title">
-            Area Layanan Servis AC
-        </h2>
-
-
-        <p>
-            Kami melayani jasa servis AC dengan sistem panggilan
-            di berbagai wilayah sekitar lokasi usaha.
-        </p>
-
-
-        <div
-            class="area-list"
-            aria-label="Wilayah layanan">
-
-            <span>Karawang</span>
-
-            <span>Telukjambe</span>
-
-            <span>Klari</span>
-
-            <span>Purwasari</span>
-
-            <span>Cikampek</span>
-
-            <span>Dan Sekitarnya</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONTACT
-========================================================== -->
-
-<section
-    class="contact"
-    id="kontak"
-    aria-labelledby="kontak-title">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2 id="kontak-title">
-                Hubungi Kami
-            </h2>
-
-            <p>
-                Konsultasikan masalah AC Anda
-            </p>
-
-        </div>
-
-
-
-        <div class="contact-grid">
-
-
-            <div class="contact-box">
-
-                <h3>
-                    Informasi Kontak
-                </h3>
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        📱 WhatsApp
-                    </strong>
+                <div class="buttons">
 
                     <a
-                        href="https://wa.me/6281234567890"
+                        href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20tanya%20jasa%20servis%20AC"
+                        class="btn btn-wa"
                         target="_blank"
                         rel="noopener noreferrer">
 
-                        0812-3456-7890
+                        💬 Hubungi WhatsApp
+
+                    </a>
+
+                    <a
+                        href="#layanan"
+                        class="btn btn-outline">
+
+                        Lihat Layanan
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <h2>
+                    Kenapa Pilih Kami?
+                </h2>
+
+                <div>
+                    ✓ Teknisi berpengalaman
+                </div>
+
+                <div>
+                    ✓ Melayani panggilan
+                </div>
+
+                <div>
+                    ✓ Harga transparan
+                </div>
+
+                <div>
+                    ✓ Pengerjaan profesional
+                </div>
+
+                <div>
+                    ✓ Konsultasi melalui WhatsApp
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SERVICES
+    ========================================================== -->
+
+    <section
+        class="services"
+        id="layanan">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Layanan Servis AC
+                </h2>
+
+                <p>
+                    Berbagai kebutuhan perawatan
+                    dan perbaikan AC.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ❄️
+                    </div>
+
+                    <h3>
+                        Cuci AC
+                    </h3>
+
+                    <p>
+                        Membersihkan AC dari debu
+                        dan kotoran agar udara tetap
+                        bersih dan sejuk.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🔧
+                    </div>
+
+                    <h3>
+                        Servis AC
+                    </h3>
+
+                    <p>
+                        Pemeriksaan dan perbaikan
+                        AC yang mengalami gangguan.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💨
+                    </div>
+
+                    <h3>
+                        Isi Freon
+                    </h3>
+
+                    <p>
+                        Pemeriksaan dan pengisian
+                        refrigerant sesuai kebutuhan.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🛠️
+                    </div>
+
+                    <h3>
+                        AC Tidak Dingin
+                    </h3>
+
+                    <p>
+                        Membantu mencari penyebab
+                        AC tidak dingin dan melakukan
+                        perbaikan.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Bongkar Pasang
+                    </h3>
+
+                    <p>
+                        Layanan bongkar dan pasang
+                        unit AC dengan pengerjaan
+                        yang rapi.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Instalasi AC
+                    </h3>
+
+                    <p>
+                        Pemasangan AC baru untuk
+                        rumah, kantor, toko dan
+                        tempat usaha.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+
+    <section
+        class="about"
+        id="tentang">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80"
+                        alt="Teknisi servis AC"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <h2>
+                        Tentang Kami
+                    </h2>
+
+                    <p>
+                        AC PRO Service merupakan jasa
+                        servis dan perawatan AC yang
+                        melayani kebutuhan rumah,
+                        kantor, toko dan tempat usaha.
+                    </p>
+
+                    <p>
+                        Kami membantu menangani berbagai
+                        masalah AC dengan mengutamakan
+                        pengerjaan yang rapi dan pelayanan
+                        yang baik.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>
+                            ✅ Teknisi berpengalaman
+                        </li>
+
+                        <li>
+                            ✅ Melayani panggilan
+                        </li>
+
+                        <li>
+                            ✅ Harga dapat dikonsultasikan
+                        </li>
+
+                        <li>
+                            ✅ Melayani berbagai kebutuhan AC
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PRICE
+    ========================================================== -->
+
+    <section
+        class="price"
+        id="harga">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Perkiraan Harga
+                </h2>
+
+                <p>
+                    Harga dapat berbeda sesuai kondisi
+                    dan jenis pekerjaan.
+                </p>
+
+            </div>
+
+
+            <div class="price-grid">
+
+
+                <div class="price-card">
+
+                    <h3>
+                        Cuci AC
+                    </h3>
+
+                    <div class="price-number">
+                        Mulai Rp75.000
+                    </div>
+
+                    <p>
+                        Per unit AC.
+                    </p>
+
+                </div>
+
+
+                <div class="price-card">
+
+                    <h3>
+                        Servis AC
+                    </h3>
+
+                    <div class="price-number">
+                        Mulai Rp100.000
+                    </div>
+
+                    <p>
+                        Tergantung kerusakan.
+                    </p>
+
+                </div>
+
+
+                <div class="price-card">
+
+                    <h3>
+                        Isi Freon
+                    </h3>
+
+                    <div class="price-number">
+                        Mulai Rp150.000
+                    </div>
+
+                    <p>
+                        Menyesuaikan jenis freon.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         AREA LAYANAN
+    ========================================================== -->
+
+    <section
+        class="area"
+        id="area">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Area Layanan
+                </h2>
+
+                <p>
+                    Melayani panggilan di wilayah
+                    dan area sekitar.
+                </p>
+
+            </div>
+
+
+            <div class="area-list">
+
+                <div class="area-item">
+                    Karawang
+                </div>
+
+                <div class="area-item">
+                    Telukjambe
+                </div>
+
+                <div class="area-item">
+                    Klari
+                </div>
+
+                <div class="area-item">
+                    Purwasari
+                </div>
+
+                <div class="area-item">
+                    Cikampek
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         KONTAK
+    ========================================================== -->
+
+    <section
+        class="contact"
+        id="kontak">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Hubungi Kami
+                </h2>
+
+                <p>
+                    Konsultasikan kebutuhan servis AC
+                    Anda melalui WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Informasi Kontak
+                    </h3>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📱 WhatsApp
+                        </strong>
+
+                        <a
+                            href="https://wa.me/6281234567890"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            0812-3456-7890
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📍 Area
+                        </strong>
+
+                        Karawang, Jawa Barat
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            🕐 Jam Operasional
+                        </strong>
+
+                        Setiap hari
+                        08.00 - 21.00
+
+                    </div>
+
+
+                    <br>
+
+
+                    <a
+                        href="https://wa.me/6281234567890?text=Halo%20AC%20PRO%20Service%2C%20saya%20ingin%20konsultasi%20servis%20AC."
+                        class="btn btn-wa"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        💬 Chat WhatsApp
 
                     </a>
 
                 </div>
 
 
-                <div class="contact-item">
+                <div>
 
-                    <strong>
-                        📍 Alamat
-                    </strong>
-
-                    Karawang, Jawa Barat
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        🕐 Jam Pelayanan
-                    </strong>
-
-                    Senin - Minggu, 08.00 - 21.00
+                    <iframe
+                        class="map"
+                        src="https://www.google.com/maps?q=Karawang%20Jawa%20Barat&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        title="Lokasi AC PRO Service">
+                    </iframe>
 
                 </div>
 
-
-                <br>
-
-
-                <a
-                    href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20mengenai%20AC."
-                    class="btn btn-wa"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    💬 Chat WhatsApp
-
-                </a>
-
-            </div>
-
-
-
-            <div>
-
-                <!--
-                    GANTI LOKASI GOOGLE MAPS
-                    DENGAN LOKASI USAHA ASLI
-                -->
-
-                <iframe
-                    class="map"
-                    src="https://www.google.com/maps?q=Karawang%20Jawa%20Barat&output=embed"
-                    title="Lokasi servis AC di Karawang"
-                    loading="lazy">
-                </iframe>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =========================================================
+         CTA
+    ========================================================== -->
 
-<!-- =========================================================
-     CTA
-========================================================== -->
+    <section class="cta">
 
-<section
-    class="cta"
-    aria-labelledby="cta-title">
+        <div class="container">
 
-    <div class="container">
+            <h2>
+                AC Bermasalah?
+            </h2>
+
+            <p>
+                Hubungi kami dan konsultasikan
+                masalah AC Anda sekarang.
+            </p>
+
+            <a
+                href="https://wa.me/6281234567890?text=Halo%20AC%20PRO%20Service%2C%20saya%20ingin%20servis%20AC."
+                class="btn btn-wa"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                💬 Hubungi WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
 
 
-        <h2 id="cta-title">
-            AC Bermasalah? Hubungi Kami!
-        </h2>
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
 
+    <footer>
 
         <p>
-            Jangan biarkan AC bermasalah terlalu lama.
-            Konsultasikan kebutuhan servis AC Anda sekarang.
+            © 2026 AC PRO Service.
+            Semua Hak Dilindungi.
         </p>
 
-
-        <a
-            href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20memesan%20jasa%20servis%20AC."
-            class="btn btn-wa"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            📱 Pesan Servis Sekarang
-
-        </a>
-
-    </div>
-
-</section>
-
-</main>
+    </footer>
 
 
+    <!-- =========================================================
+         FLOATING WHATSAPP
+    ========================================================== -->
 
-<!-- =========================================================
-     FOOTER
-========================================================== -->
+    <a
+        href="https://wa.me/6281234567890?text=Halo%20AC%20PRO%20Service%2C%20saya%20ingin%20bertanya%20tentang%20servis%20AC."
+        class="floating-wa"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hubungi melalui WhatsApp">
 
-<footer>
+        💬
 
-    <p>
-        © 2026 AC PRO Service. All Rights Reserved.
-    </p>
-
-    <p>
-        Jasa Servis AC Profesional
-    </p>
-
-</footer>
+    </a>
 
 
+    <!-- =========================================================
+         JAVASCRIPT MENU MOBILE
+    ========================================================== -->
 
-<!-- =========================================================
-     FLOATING WHATSAPP
-========================================================== -->
+    <script>
 
-<a
-    href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20memesan%20jasa%20servis%20AC."
-    class="floating-wa"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat WhatsApp">
+        const menuBtn =
+            document.getElementById("menuBtn");
 
-    💬
-
-</a>
+        const navMenu =
+            document.getElementById("navMenu");
 
 
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================== -->
-
-<script>
-
-function toggleMenu() {
-
-    const menu = document.getElementById("navMenu");
-
-    const button =
-        document.querySelector(".menu-btn");
-
-    menu.classList.toggle("active");
-
-    const isOpen =
-        menu.classList.contains("active");
-
-    button.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
-}
-
-
-/* Menutup menu setelah link diklik */
-
-document
-    .querySelectorAll("#navMenu a")
-    .forEach(function(link) {
-
-        link.addEventListener(
+        menuBtn.addEventListener(
             "click",
-            function() {
+            function () {
 
-                document
-                    .getElementById("navMenu")
-                    .classList.remove("active");
-
-                document
-                    .querySelector(".menu-btn")
-                    .setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                navMenu.classList.toggle("active");
 
             }
         );
 
-    });
 
-</script>
+        /* Tutup menu setelah memilih menu */
+
+        const navLinks =
+            document.querySelectorAll("#navMenu a");
+
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    navMenu.classList.remove("active");
+
+                }
+            );
+
+        });
+
+    </script>
 
 
 </body>
+
 </html>
